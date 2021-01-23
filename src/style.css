@@ -1,0 +1,115 @@
+
+*{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+#weather{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+}
+
+form{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#time{
+  width: inherit;
+  display: flex;
+  justify-content: center;
+}
+
+.time{
+  font-size: 4em;
+  margin-block-end: 0.1em;
+}
+#time_h{
+  width: 29%;
+  text-align: end;
+}
+#time_m{
+  width: 42%;
+  text-align: center;
+}
+#time_s{
+  width: 29%;
+  text-align: start;
+}
+input{
+  border: 0;
+  padding: 0;
+  outline: none;
+  text-align: center;
+  background: none;
+  color:white;
+}
+input::placeholder{
+  color: rgba(255,255,255,0.5);
+}
+
+#username-input input{
+  font-size: 1.5em;
+  margin-block-start: 0.5em;
+  margin-block-end: 1em;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+#username-text{
+  text-align: center;
+  width: 100vw;
+  color:white;
+  font-size: 1.5em;
+  margin-block-start: 0.5em;
+  margin-block-end: 1em;
+}
+
+#todo-input input{
+  font-size: 1.2em;
+  border-bottom: 1px solid white;
+}
+
+#todolist{
+  width: 100%;
+  display: flex;
+}
+
+#todolist ul{
+  width: 50%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+li{
+  color:white;
+  font-size: 1em;
+  padding-top: 5px;
+}
+
+.title{
+  color:white;
+  font-size: 1em;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+}
+
+button{
+  border:0;
+  outline: none;
+  background: none;
+  text-align:  center;
+  padding: 0px 0px 0px 10px;
+}
