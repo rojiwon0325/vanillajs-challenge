@@ -16,9 +16,11 @@ function getWeather(latitude, longtitude) {
 
 
 function handleGeoSucces(position) {
+    const latitude = position.coords.latitude;
+    const longtitude = position.coords.longtitude;
     const coordsObj = {
-        latitude: position.coords.latitude,
-        longtitude: position.coords.longtitude
+        latitude,
+        longtitude
     };
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
     console.log(localStorage.getItem(COORDS));
