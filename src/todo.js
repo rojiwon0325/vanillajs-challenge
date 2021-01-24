@@ -64,6 +64,7 @@ function addTask(text, bool) {
         li.appendChild(btn_ok);
         finishedlist.appendChild(li);
     }
+    console.log(text);
 }
 
 function moveTask(event) {
