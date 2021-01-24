@@ -4,7 +4,7 @@ const COORDS = "coords";
 const weather = document.getElementById("weather");
 
 function getWeather(latitude, longitude) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metrics`).then(
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`).then(
         response => {
             return response.json();
         }).then(json => {
