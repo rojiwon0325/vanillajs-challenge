@@ -8,7 +8,9 @@ function getWeather(latitude, longtitude) {
         response => {
             return response.json();
         }).then(json => {
-            weather.innerText = `${json.main.temp} @ ${json.name}`;
+            const temp = json.main.temp;
+            const place = json.name;
+            weather.innerText = `${temp} @ ${place}`;
         });
 }
 
