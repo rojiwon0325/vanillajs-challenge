@@ -21,9 +21,10 @@ function handleGeoSucces(position) {
         longtitude: position.coords.longtitude
     };
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
+    console.log(localStorage.getItem(COORDS));
 }
-function handleGelError(position) {
-    console.log("fail");
+function handleGelError() {
+    console.log("fail to load current position");
 }
 
 
