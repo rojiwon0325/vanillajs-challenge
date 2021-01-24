@@ -3,8 +3,8 @@ const COORDS = "coords";
 
 const weather = document.getElementById("weather");
 
-function getWeather(latitude, longtitude) {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longtitude}&appid=${API_KEY}&units=metrics`).then(
+function getWeather(latitude, longitude) {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metrics`).then(
         response => {
             return response.json();
         }).then(json => {
@@ -18,10 +18,10 @@ function getWeather(latitude, longtitude) {
 function handleGeoSucces(position) {
     const coordsObj = {
         latitude: position.coords.latitude,
-        longtitude: position.coords.longtitude
+        longitude: position.coords.longitude
     };
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
-    console.log(`latitude: ${position.coords.latitude} longtitude:${position.coords.longtitude}`);
+    getWeather(coordsObj.latitude, coordsObj.longitude);
 }
 function handleGelError() {
     console.log("fail to load current position");
@@ -38,7 +38,7 @@ function loadCoords() {
         askForCoords();
     } else {
         const parseCoords = JSON.parse(loadedCoords);
-        getWeather(parseCoords.latitude, parseCoords.longtitude);
+        getWeather(parseCoords.latitude, parseCoords.longitude);
     }
 }
 
